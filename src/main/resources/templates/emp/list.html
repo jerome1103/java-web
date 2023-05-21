@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://getbootstrap.com/docs/4.0/examples/dashboard/ -->
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>Dashboard Template for Bootstrap</title>
+		<!-- Bootstrap core CSS -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="assets/css/dashboard.css" rel="stylesheet">
+		<style type="text/css">
+			/* Chart.js */
+			
+			@-webkit-keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			@keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			.chartjs-render-monitor {
+				-webkit-animation: chartjs-render-animation 0.001s;
+				animation: chartjs-render-animation 0.001s;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 引入topbar -->
+		<div th:replace="commons/topbar :: topbar"></div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<!-- 引入sidebar -->
+				<div th:replace="commons/sidebar :: sidebar(activeUri='emps')"></div>
+				<!-- 主內容 -->
+				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-5">
+					<h2>會員管理</h2>
+					<div class="table-responsive">
+						<a class="btn btn-sm btn-success mb-2" th:href="@{/emp}">新增會員</a>
+						<table class="table table-bordered table-sm table-hover">
+							<thead>
+								<tr>
+									<th>id</th>
+									<th>lastName</th>
+									<th>email</th>
+									<th>gender</th>
+									<th>department</th>
+									<th>birth</th>
+									<th>fumction</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="emp:${emps}">
+									<td th:text="${emp.id}"></td>
+									<td>[[${emp.lastName}]]</td>
+									<td>[[${emp.email}]]</td>
+									<td>[[${emp.gender}==0?'女':'男']]</td>
+									<td>[[${emp.department.departmentName}]]</td>
+									<td th:text="${#dates.format(emp.birth,'yyyy/MM/dd')}"></td>
+									<td>
+										<a class="btn btn-sm btn-primary" th:href="@{/emp/}+${emp.id}">編輯</a>
+										<button id="deleteEmpBtn" th:attr="del_uri=@{/emp/}+${emp.id}" class="btn btn-sm btn-danger">刪除</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<form id="deleteEmpForm" class="d-none" method="post" th:method="delete"></form>
+					</div>
+				</main>
+			</div>
+		</div>
+
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="assets/js/jquery-3.2.1.slim.min.js"></script>
+		<script type="text/javascript" src="assets/js/popper.min.js"></script>
+		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+
+		<!-- Icons -->
+		<script type="text/javascript" src="assets/js/feather.min.js"></script>
+		<script>
+			feather.replace()
+		</script>
+
+		<!-- Graphs -->
+		<script type="text/javascript" src="assets/js/Chart.min.js"></script>
+		<script>
+			var ctx = document.getElementById("myChart");
+			var myChart = new Chart(ctx, {
+				type: 'line',
+				data: {
+					labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+					datasets: [{
+						data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+						lineTension: 0,
+						backgroundColor: 'transparent',
+						borderColor: '#007bff',
+						borderWidth: 4,
+						pointBackgroundColor: '#007bff'
+					}]
+				},
+				options: {
+					scales: {
+						yAxes: [{
+							ticks: {
+								beginAtZero: false
+							}
+						}]
+					},
+					legend: {
+						display: false,
+					}
+				}
+			});
+			
+		</script>
+
+		<script>
+			var deleteBtn = document.getElementById("deleteEmpBtn");
+			var deleteForm = document.getElementById("deleteEmpForm");
+			deleteBtn.addEventListener('click',function(){
+				var delUri = this.getAttribute("del_uri");
+				deleteForm.setAttribute("action",delUri);
+				deleteForm.submit();
+			},false);
+		</script>
+	</body>
+
+</html>

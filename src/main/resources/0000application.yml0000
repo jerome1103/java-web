@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+ datasource:
+  username: tester
+  password: P@ssw0rd
+  url: jdbc:mysql://127.0.0.1:3306/mmsweb
+  driver-class-name: com.mysql.cj.jdbc.Driver
+ jpa:
+   hibernate:
+    ddl-auto: update
+   show-sql: true
