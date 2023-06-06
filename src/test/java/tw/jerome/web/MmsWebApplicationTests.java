@@ -1,5 +1,8 @@
 package tw.jerome.web;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +13,9 @@ class MmsWebApplicationTests {
 	Logger logger = LoggerFactory.getLogger(getClass());
 	@Test
 	void contextLoads(){
+//		int romanToInt = romanToInt("MCMXCIV");
+//		System.out.println(romanToInt);
 	}
-
+	
 }
+

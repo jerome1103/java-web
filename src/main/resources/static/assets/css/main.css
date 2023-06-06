@@ -1,0 +1,13 @@
+.text-shop-title{
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    cursor: pointer;
+    display: -webkit-box;
+    font-weight: 400;
+    height: 48px;
+    opacity: 1;
+    overflow: hidden;
+    width: 100%;
+    word-break: break-all;
+    white-space: normal;
+}

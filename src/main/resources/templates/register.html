@@ -23,24 +23,24 @@
         style="height: 100vh"
       >
         <img
-          class="col-6 h-75 border rounded-4 rounded-end-0 shadow p-0"
+          class="col-6 h-75 border shadow p-0"
           src="/assets/img/base/logo.png"
           height="100%"
         />
         <div
-          class="col-6 h-75 border rounded-4 rounded-start-0 shadow p-0 d-flex justify-content-center align-items-center"
+          class="col-6 h-75 border shadow p-0 d-flex justify-content-center align-items-center"
         >
           <form class="w-50">
             <div class="text-center mb-3">
-              <div class="fs-1">歡迎登入</div>
+              <div class="fs-1">註冊會員</div>
               <div class="fs-6">
-                沒有優品帳號嗎? <a href="/register">立即註冊</a>
+                已經擁有優品帳號了嗎? <a href="/login">立即登入</a>
               </div>
             </div>
 
             <div class="mb-3">
               <!-- <label for="exampleInputEmail1" class="form-label"
-                >電子信箱</label
+                >輸入電子信箱</label
               > -->
               <input
                 type="email"
@@ -49,12 +49,11 @@
                 aria-describedby="emailHelp"
                 placeholder="請輸入電子信箱"
               />
-              <div id="emailHelp" class="form-text">
-                我們絕不會與其他任何人分享您的電子郵件
-              </div>
             </div>
             <div class="mb-3">
-              <!-- <label for="exampleInputPassword1" class="form-label">密碼</label> -->
+              <!-- <label for="exampleInputPassword1" class="form-label"
+                >輸入密碼</label
+              > -->
               <input
                 type="password"
                 class="form-control"
@@ -62,20 +61,23 @@
                 placeholder="請輸入密碼"
               />
             </div>
-            <div class="mb-3 form-check">
+            <div class="mb-3">
+              <!-- <label for="exampleInputPassword1" class="form-label"
+                >確認密碼</label
+              > -->
               <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="請確認密碼"
               />
-              <label class="form-check-label" for="exampleCheck1">記住我</label>
             </div>
             <button type="submit" class="btn btn-primary mb-3 w-100">
-              登入
+              註冊
             </button>
 
             <div>
-              登入帳號，即表示您已閱讀並同意 優品購物網
+              註冊帳號，即表示您已閱讀並同意 優品購物網
               <a href="#">會員條款</a>
               與
               <a href="#">客戶隱私權條款</a>
