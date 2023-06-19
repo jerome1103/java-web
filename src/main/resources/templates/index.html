@@ -38,24 +38,26 @@
             <span class="fs-5 fw-semibold">YU-PIN 優品購物網</span>
           </a>
           <!-- 搜尋列 -->
-          <form class="col-12 col-lg-6 mb-0 me-lg-3" role="search">
+          <form class="col-12 col-lg-6 mb-0 me-lg-3 d-flex g-2 align-items-center justify-content-center" role="search">
             <input
               type="search"
-              class="form-control"
+              class="form-control w-75 rounded-end-0"
               placeholder="搜尋商品..."
               aria-label="Search"
             />
+            <div class="col-auto">
+              <a
+                name=""
+                id=""
+                class="btn btn-secondary rounded-start-0 w-auto"
+                href="#"
+                role="button"
+                >搜尋</a
+              >
+            </div>
           </form>
-          <a
-            name=""
-            id=""
-            class="btn btn-secondary col-12 col-lg-1 mb-3 mb-lg-0"
-            href="#"
-            role="button"
-            >搜尋</a
-          >
           <!-- 多國語系 -->
-          <div class="col-12 col-lg-auto text-center mb-3 mb-lg-0">
+          <!-- <div class="col-12 col-lg-auto text-center mb-3 mb-lg-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -69,47 +71,69 @@
               />
             </svg>
             <span>中文/TW_zh</span>
-          </div>
-          <!-- 購物車 -->
-          <div class="col-12 col-lg-auto text-center mb-3 mb-lg-0">
+          </div> -->
+          <!-- 購物車按鈕 -->
+          <div class="col-12 col-lg-auto text-center mb-3 mb-lg-0 d-flex align-items-center justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-cart"
+              class="bi bi-cart me-1"
               viewBox="0 0 16 16"
             >
               <path
                 d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
               />
             </svg>
-            <span>購物車</span>
+            <span class="me-1">購物車</span>
+            <div class="badge bg-secondary">1</div>
+          </div>
+          <!-- 購物車 -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header border-bottom">
+              <div id="offcanvasRightLabel" class="fs-5">購物車</div>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="card mb-3 shadow" style="max-width: 540px;">
+                <div class="row g-0 p-4">
+                  <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <img src="/assets/img/shop/shop-book-1.jpg" class="img-fluid me-4 py-2 shadow rounded" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body p-0">
+                      <p class="card-title">Clean Architecture實作篇：在整潔的架構上弄髒你的手</p>
+                      <select class="form-select mb-1" name="" id="">
+                        <option selected value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                      <div class="card-text text-danger text-end">$1700</div>
+                      <div class="text-end">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                          <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="offcanvas-header border-top">
+              <div id="offcanvasRightLabel" class="fs-5">合計</div>
+              <div id="offcanvasRightLabel" class="fs-5 text-end text-danger">$1700</div>
+            </div>
+            <button class="fs-5 btn btn-primary rounded-0">結帳</button>
           </div>
           <!-- 會員管理 -->
           <div class="dropdown text-end">
-            <a
-              href="/login"
-              class="d-block link-dark text-decoration-none dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img
-                src="/assets/img/base/face.jpg"
-                width="32"
-                height="32"
-                class="rounded-circle"
-              />
-            </a>
-            <ul class="dropdown-menu text-small">
-              <li><a class="dropdown-item" href="#">帳戶設定</a></li>
-              <li><a class="dropdown-item" href="#">查看訂單</a></li>
-              <li><a class="dropdown-item" href="#">退貨專區</a></li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li><a class="dropdown-item" href="#">登出</a></li>
-            </ul>
+            <a href="/login" class="">登入</a>
+            /
+            <a href="/register" class="">註冊</a>
+            <div class="d-none">使用者 您好!</div>
           </div>
         </div>
       </div>
@@ -119,33 +143,120 @@
       <!-- 列表、大廣告、熱銷 -->
       <div class="row justify-content-center mb-3">
         <!-- 分類列表 -->
-        <div class="col-12 col-lg-1 p-0 mb-3 mb-lg-0">
-          <div class="list-group h-100 justify-content-start text-center">
+        <div class="col-12 col-lg-1 p-0 mb-3 mb-lg-0 all-menu">
+          <div class="list-group h-100 justify-content-start text-center position-relative">
+            <!-- 電腦/電競/週邊 -->
+            <div class="comp-menu-content position-absolute d-flex justify-content-start align-items-start bg-light h-100 start-100 z-3 shadow shadow-lg rounded-end border-start border-5 border-warning p-3 d-none" style="width: 800px;">
+              <div class="fs-6 text-start border-end pe-3 h-100">
+                <div class="fs-4 fw-bold text-primary mb-1 text-nowrap">電腦/電競/週邊</div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">筆記型電腦</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">桌上型電腦</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">電腦螢幕</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">鍵盤</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">滑鼠</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">數位電玩</a></div>
+              </div>
+              <div class="row row-cols-md-4 px-4 h-100 align-items-baseline">
+                <div class="card col text-center p-0">
+                  <img src="\assets\img\shop\shop-3c-1.jpg" class="card-img-top" alt="3cshop">
+                  <a href="#" class="btn btn-primary w-100 rounded-top-0">特價$3590</a>
+                </div>
+                <div class="card col text-center p-0">
+                  <img src="\assets\img\shop\shop-3c-1.jpg" class="card-img-top" alt="3cshop">
+                  <a href="#" class="btn btn-primary w-100 rounded-top-0">特價$3590</a>
+                </div>
+                <div class="card col text-center p-0">
+                  <img src="\assets\img\shop\shop-3c-1.jpg" class="card-img-top" alt="3cshop">
+                  <a href="#" class="btn btn-primary w-100 rounded-top-0">特價$3590</a>
+                </div>
+                <div class="card col text-center p-0">
+                  <img src="\assets\img\shop\shop-3c-1.jpg" class="card-img-top" alt="3cshop">
+                  <a href="#" class="btn btn-primary w-100 rounded-top-0">特價$3590</a>
+                </div>
+                <div class="card col text-center p-0">
+                  <img src="\assets\img\shop\shop-3c-1.jpg" class="card-img-top" alt="3cshop">
+                  <a href="#" class="btn btn-primary w-100 rounded-top-0">特價$3590</a>
+                </div>
+              </div>
+            </div>
+            <!-- 手機/平板/耳機 -->
+            <div class="comp-menu-content position-absolute d-flex justify-content-start align-items-start bg-light h-100 start-100 z-3 shadow shadow-lg rounded-end border-start border-5 border-warning p-3 d-none" style="width: 800px;">
+              <div class="fs-6 text-start border-end pe-3 h-100">
+                <div class="fs-4 fw-bold text-primary mb-1 text-nowrap">手機/平板/耳機</div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">藍芽耳機</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">Android手機</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">Android平板</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">Apple手機</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">Apple平板</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">Apple周邊</a></div>
+              </div>
+              <div class="row row-cols-md-4 px-4 h-100 align-items-baseline">
+                <div class="card col text-center p-0">
+                  <img src="\assets\img\shop\shop-3c-1.jpg" class="card-img-top" alt="3cshop">
+                  <a href="#" class="btn btn-primary w-100 rounded-top-0">特價$3590</a>
+                </div>
+                <div class="card col text-center p-0">
+                  <img src="\assets\img\shop\shop-3c-1.jpg" class="card-img-top" alt="3cshop">
+                  <a href="#" class="btn btn-primary w-100 rounded-top-0">特價$3590</a>
+                </div>
+                <div class="card col text-center p-0">
+                  <img src="\assets\img\shop\shop-3c-1.jpg" class="card-img-top" alt="3cshop">
+                  <a href="#" class="btn btn-primary w-100 rounded-top-0">特價$3590</a>
+                </div>
+                <div class="card col text-center p-0">
+                  <img src="\assets\img\shop\shop-3c-1.jpg" class="card-img-top" alt="3cshop">
+                  <a href="#" class="btn btn-primary w-100 rounded-top-0">特價$3590</a>
+                </div>
+                <div class="card col text-center p-0">
+                  <img src="\assets\img\shop\shop-3c-1.jpg" class="card-img-top" alt="3cshop">
+                  <a href="#" class="btn btn-primary w-100 rounded-top-0">特價$3590</a>
+                </div>
+              </div>
+            </div>
+            <!-- 無 -->
+            <div class="comp-menu-content position-absolute d-flex justify-content-start align-items-start bg-light h-100 start-100 z-3 shadow shadow-lg rounded-end border-start border-5 border-warning p-3 d-none" style="width: 800px;">
+              <div class="fs-6 text-start border-end pe-3 h-100">
+                <div class="fs-4 fw-bold text-primary mb-1 text-nowrap">大標題</div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">子標題</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">子標題</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">子標題</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">子標題</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">子標題</a></div>
+                <div class="mb-1 ps-3"><a href="/product" class="link-dark">子標題</a></div>
+              </div>
+              <div class="row row-cols-md-4 px-4 h-100 align-items-baseline">
+                <div class="card col text-center p-0">
+                  <img src="\assets\img\shop\shop-3c-1.jpg" class="card-img-top" alt="3cshop">
+                  <a href="#" class="btn btn-primary w-100 rounded-top-0">特價$3590</a>
+                </div>
+              </div>
+            </div>
+            <!-- 總分類 -->
             <span class="list-group-item bg-secondary text-light"
               >全站分類</span
             >
-            <a href="#" class="list-group-item list-group-item-action">
-              家電/電玩/視聽
+            <a href="#" class="comp-menu-list list-group-item list-group-item-action">
+              電腦/電競/週邊
             </a>
-            <a href="#" class="list-group-item list-group-item-action"
+            <a href="#" class="comp-menu-list list-group-item list-group-item-action"
               >手機/平板/耳機</a
             >
-            <a href="#" class="list-group-item list-group-item-action"
-              >電腦/電競/週邊</a
+            <a href="#" class="comp-menu-list list-group-item list-group-item-action"
+              >家電/電玩/視聽</a
             >
-            <a href="#" class="list-group-item list-group-item-action"
+            <a href="#" class="comp-menu-list list-group-item list-group-item-action"
               >食品/零食/飲料</a
             >
-            <a href="#" class="list-group-item list-group-item-action"
+            <a href="#" class="comp-menu-list list-group-item list-group-item-action"
               >彩妝/保養/洗沐</a
             >
-            <a href="#" class="list-group-item list-group-item-action"
+            <a href="#" class="comp-menu-list list-group-item list-group-item-action"
               >服裝/內褲/襪子</a
             >
-            <a href="#" class="list-group-item list-group-item-action"
+            <a href="#" class="comp-menu-list list-group-item list-group-item-action"
               >珠寶/精品/配飾</a
             >
-            <a href="#" class="list-group-item list-group-item-action"
+            <a href="#" class="comp-menu-list list-group-item list-group-item-action"
               >清潔/餐廚/寵物</a
             >
           </div>
@@ -347,6 +458,7 @@
               background-color: #e1e4e5;
             "
           >
+          <a href="/shop">
             <div class="card">
               <div class="card-body p-0">
                 <img src="/assets/img/shop/shop-3c-1.jpg" width="100%" />
@@ -356,16 +468,20 @@
                 </div>
               </div>
             </div>
+          </a>
 
-            <div class="card">
-              <div class="card-body p-0">
-                <img src="/assets/img/shop/shop-3c-2.jpg" width="100%" />
-                <div class="p-3">
-                  <p class="fs-6 text-shop-title">羅技 MX Keys 智能無線鍵盤</p>
-                  <sapn class="fs-5 text-danger">$4,990</span>
+            <a href="/shop">
+              <div class="card">
+                <div class="card-body p-0">
+                  <img src="/assets/img/shop/shop-3c-2.jpg" width="100%" />
+                  <div class="p-3">
+                    <p class="fs-6 text-shop-title">羅技 MX Keys 智能無線鍵盤</p>
+                    <sapn class="fs-5 text-danger">$4,990</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
+
           </div>
         </div>
       </div>
@@ -538,7 +654,7 @@
     </svg>
     <!-- 下方明暗按鈕 -->
     <div
-      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
+      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle d-none"
     >
       <button
         class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
@@ -608,7 +724,9 @@
       </ul>
     </div>
     <!-- JavaScript Libraries -->
+    <!-- <script src="../assets/dist/js/popper.min.js"></script> -->
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/dist/js/main.js"></script>
     <script src="../assets/js/color-modes.js"></script>
   </body>
 </html>

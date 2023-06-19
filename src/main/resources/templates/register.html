@@ -14,21 +14,62 @@
   </head>
 
   <body style="background-color: #f4f4f4">
-    <header>
-      <!-- place navbar here -->
+    <!-- 頂部 -->
+    <header class="p-3 mb-3 w-100 border-bottom position-absolute">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between"
+        >
+          <!-- LOGO -->
+          <a
+            href="/"
+            class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"
+          >
+            <img
+              class="rounded-3 me-2"
+              src="/assets/img/base/logo_50x50.png"
+              alt="SVG"
+              width="30"
+              height="30"
+            />
+            <span class="fs-5 fw-semibold">YU-PIN 優品購物網</span>
+          </a>
+
+          <!-- 會員管理 -->
+          <div class="dropdown text-end">
+            <a href="/" class="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-return-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"
+                />
+              </svg>
+              返回YuPin優品首頁
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
+    <!--  -->
     <main class="container">
       <div
         class="row justify-content-center align-items-center"
         style="height: 100vh"
       >
         <img
-          class="col-6 h-75 border shadow p-0"
+          class="col-6 h-75 border rounded-3 shadow p-0"
           src="/assets/img/base/logo.png"
           height="100%"
         />
         <div
-          class="col-6 h-75 border shadow p-0 d-flex justify-content-center align-items-center"
+          class="col-6 h-75 border rounded-3 shadow p-0 d-flex justify-content-center align-items-center"
         >
           <form class="w-50">
             <div class="text-center mb-3">
